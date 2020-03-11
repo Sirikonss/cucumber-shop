@@ -12,6 +12,7 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
+
     public double getSubtotal() {
         return prod.getPrice() * quantity;
     }

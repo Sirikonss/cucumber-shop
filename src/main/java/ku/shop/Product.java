@@ -3,10 +3,12 @@ package ku.shop;
 public class Product {
     private double price;
     private String name;
+    public int quantity;
 
-    public Product(String name, double price) {
+    public Product(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
+        this.quantity = quantity;
     }
 
     public String getName() {
@@ -14,6 +16,9 @@ public class Product {
     }
     public double getPrice() {
         return price;
+    }
+    public double getQuantity() {
+        return quantity;
     }
 
     public void setName(String name) {
@@ -23,5 +28,8 @@ public class Product {
         if (price < 0)
             throw new IllegalArgumentException("Price must be not be negative zero");
         this.price = price;
+    }
+    public void lessQuantity(int quantity) {
+        this.quantity -= quantity;
     }
 }
